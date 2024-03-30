@@ -1,0 +1,32 @@
+/* Add this CSS to your stylesheet */
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff; /* Change to your desired hover color */
+}
+
+/* Navbar Dropdown */
+.navbar-nav .dropdown-menu {
+    background-color: #343a40; /* Dropdown background color */
+}
+
+.navbar-nav .dropdown-item {
+    color: #ffffff; /* Dropdown item text color */
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #495057; /* Dropdown item hover background color */
+    color: #ffffff; /* Dropdown item hover text color */
+}
