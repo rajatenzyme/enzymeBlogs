@@ -19,7 +19,13 @@
     </div>
 
     <div class="container mt-5">
-        <img src="<%= blog.createdBy.profileImageURL %>" width="40px" />  <%= blog.createdBy.name %>
+        <% if (blog.createdBy) { %>
+            <img src="<%= blog.createdBy.profileImageURL %>" width="40px" />
+            <%= blog.createdBy.name %>
+        <% } else { %>
+            <img src="/images/avatar.png" width="40px" />
+            <span>Admin</span>
+        <% } %>
         
     </div>
 
@@ -41,8 +47,8 @@
             <div class="container mt-2" >
                 <div class="container">
                     <div style="display: flex; align-items: center;">
-                        <img src="<%= comment.createdBy.profileImageURL %>" width="40px" style="margin-right: 10px;">
-                        <span><%= comment.createdBy.name %></span>
+                        <img src="<%= comment.createdBy?.profileImageURL %>" width="40px" style="margin-right: 10px;">
+                        <span><%= comment.createdBy?.name %></span>
                         <h6 style="margin-left: 10px; margin-bottom: 0;">(<%= new Date(comment.createdAt).toDateString().slice(4, 15) %>)</h6>
                     </div>
                 </div>

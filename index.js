@@ -34,7 +34,13 @@ app.set("views", path.resolve("./views/"))
 
 app.use(checkForAuthentication("token"));
 
-app.get('/', async (req, res) => {
+app.get("/", (req, res) => {
+  res.render("votingHome", {
+    user : req.user,
+  });
+});
+
+app.get('/home', async (req, res) => {
   const allBlogs = await Blog.find({});
   res.render("home", {
     user : req.user,

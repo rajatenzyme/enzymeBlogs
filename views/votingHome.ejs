@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head') %>
+  
+    <title>My Blogs</title>
+    <style>
+        body {
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          background-color: #f0f0f0;
+        }
+        h1 {
+          font-size: 50px;
+          font-weight: 700;
+          color: #333;
+          text-align: center;
+          margin-top: 50px;
+        }
+        .container {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+        }
+        .center-image {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      </style>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    
+    <h1> Welcome to my Blogs! </h1>
+
+    <div class="container mt-4 ">
+        <img src="mac.png" width="750px" height="600px" class="center-image">
+    </div>
+  
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>
