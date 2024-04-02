@@ -1,6 +1,6 @@
 const JWT = require('jsonwebtoken');
 
-const secret = "Raj@123MyNameEnzymeVeryCoolBuddy";
+const secret = process.env.JWT_SECRET;
 
 function createTokenForUser(user) {
     const payload = {
@@ -10,7 +10,7 @@ function createTokenForUser(user) {
         role : user.role,
     };
 
-    const token = JWT.sign(payload, secret);
+    const token = JWT.sign(payload, secret, {expiresIn: 30000});
     return token;
 }
 
